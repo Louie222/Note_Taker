@@ -44,3 +44,7 @@ app.delete("/api/notes/:id", (request, response) => {
       response.end()
   });
 
+  app.get('*', (request, response) => response.sendFile(path.join(__dirname, '../../index.html')));
+
+  app.listen(port, () => console.log(`app listening on port:${port}`));
+
